@@ -1,0 +1,52 @@
+<div id="content">
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="row" id="productMain">
+                <div class="col-sm-5">
+                    <div id="mainImage">
+                        <img src="{{product?.imageUrl}}" width="100%" class="img-responsive">
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="box">
+                        <h1 class="text-center">{{product?.name}}</h1>
+                        <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material &amp; sizing</a>
+                        </p>
+                        <p class="price">&#8358; {{product?.price|currency:'NGN':false}}</p>
+                        <p class="buttons">
+                            <app-userlogin></app-userlogin>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="details">
+                <h3>Product details</h3>
+                <p>{{product?.description}}</p>
+                <h3>Material &amp; care</h3>
+                <ul>
+                    <li *ngFor="let item of product?.material">{{item}}</li>
+                </ul>
+                <h3>Available Sizes &amp; Fits</h3>
+                <ul>
+                    <li *ngFor="let size of product?.sizes">{{size}}</li>
+                </ul>
+
+                <blockquote>
+                    <p><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em>
+                    </p>
+                </blockquote>
+                <hr>
+                <div class="social">
+                    <h3>Share</h3>
+                    <p>
+                        <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                        <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                    </p>
+                    <button class="btn btn-default btn-primary pull-right" (click)="home()"><i class="fa fa-reply"></i> Return</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -23,6 +23,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
-## Further help
+## Consuming the Mock Data
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The data consumed by the App are served from the db.json file through the json-server package
+
+run `npm install -g json-server` to install it then from within this folder run `json-server --watch db.json --port 1111`

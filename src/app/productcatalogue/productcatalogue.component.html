@@ -1,0 +1,95 @@
+<div class="row">
+    <div class="container">
+        <div class="navbar nav navbar-pills">    
+            <div class="navbar-buttons">
+                <div class="navbar-collapse collapse right" id="search-not-mobile">
+                    <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
+                        <span class="sr-only">Toggle search</span>
+                        <i class="fa fa-search"></i>Search
+                    </button>
+                </div>
+            </div>
+            <div class="collapse clearfix" id="search">
+                <form class="navbar-form col-md-12" style="width:100%" role="search">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Product name" #type>
+                                <span class="input-group-btn">
+                                    <button (click)="getProductsN(type.value)" type="submit" class="btn"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class = "input-group">
+                                <span class = "input-group-addon">&#8358;</span>
+                                <input type ="number" class ="form-control" placeholder="minimum price" min="100" step="5" #min>
+                                <span class = "input-group-addon">.00</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class = "input-group">
+                                <span class = "input-group-addon">&#8358;</span>
+                                <input type = "number" class =" form-control" placeholder="maximum price" min="100" step="5" #max>
+                                <span class = "input-group-addon">.00</span>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class = "input-group">
+                                <button (click)="getProductsF(type.value, min.value, max.value)" type="submit" class="btn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="container">
+            <div class="row" *ngIf="products?.length > 0">
+                <h3>{{ products?.length }} results for <span class="text-capitalize text-center text-info">&quot;{{type.value}}&quot;</span></h3>
+                <div class="col-md-3" *ngFor="let product of products">
+                    <div class="card card-inverse" id="products">
+                        <a routerLink='/product/{{product.id}}'><img src="{{product?.imageUrl}}" alt="" class="img-responsive"></a>
+                        <div class="card-block">
+                            <h4 class="card-title">{{product?.name}} &#8358; {{product?.price|currency:'NGN':false}}</h4>
+                            <p class="card-text">{{product?.description|truncate}}</p>
+                            <a routerLink='/product/{{product.id}}' class="btn btn-info">View Product</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" *ngIf="products && products?.length <= 0">
+                <h3 class="text-capitalize">Sorry no results found for <span class="text-uppercase text-danger">&quot;{{type.value}}&quot;</span> query</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="main-slider" *ngIf="!products">
+                        <div class="item">
+                            <img src="/assets/img/slider1.jpg" alt="" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/assets/img/slider2.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/assets/img/slider3.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/assets/img/slider4.jpg" alt="">
+                        </div>
+                    </div>
+                    <h3 class="text-center text-info">Recommended Products</h3>
+                    <div class="list-group" *ngFor="let product of recommended" style="margin: 1% 0%; height:100%">
+                        <a routerLink='/product/{{product?.id}}' class="list-group-item container col-md-4">
+                            <h3 class="list-group-item-heading">{{product?.name}} &#8358; {{product?.price|currency:'NGN':false}}</h3>
+                            <p class="list-group-item-text">{{product?.description}}</p>
+                            <img style="width: 10rem;height:10rem" class="img-thumbnail" src="{{product?.imageUrl}}" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

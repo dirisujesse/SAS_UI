@@ -1,0 +1,27 @@
+#products {
+	background: rgba(255,55,55,0.5);
+	box-shadow: 0px 2px rgb(55,55,255);
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: opx;
+	height: 100%;
+	margin: 1% 1%;
+}
+
+#products:hover {
+	background: rgb(55,55,255);
+	box-shadow: 0px 2px 2px rgba(255,55,55,0.5);
+}
+
+#products:hover a>img {
+	padding: 2%;
+	-webkit-transform: rotate(180deg);
+	   -moz-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	     -o-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+
+#products a>img {
+	height: 40rem;
+	width: 100%
+}

@@ -1,3 +1,288 @@
-<h1>
-  {{title}}
-</h1>
+<div id="top">
+    <div class="container-fluid">
+        <div class="col-md-12" data-animate="fadeInDown">
+            <ul class="menu">
+                <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#register-modal">Register</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="Login">Customer login</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="customer-orders.html" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email-modal" placeholder="emai">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password-modal" placeholder="password">
+                        </div>
+                        <p class="text-center">
+                            <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                        </p>
+                    </form>
+                    <p class="text-center text-muted">Not registered yet?</p>
+                    <p class="text-center text-muted"><a href="register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="Register" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="Register">Create Account</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="customer-orders.html" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email-modal" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password-modal" placeholder="password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Accept terms and conditions
+                            </label>
+                        </div>
+                        <p class="text-center">
+                            <button class="btn btn-primary"><i class="fa fa-pencil"></i>Register</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-default yamm" role="navigation" id="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
+                <img src="/assets/img/favicon.png" alt="Obaju logo" class="hidden-xs">
+                <img src="/assets/img/favicon.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+            </a>
+            <div class="navbar-buttons">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-align-justify"></i>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+                    <span class="sr-only">Toggle search</span>
+                    <i class="fa fa-search"></i>
+                </button>
+                <a class="btn btn-default navbar-toggle" href="basket.html">
+                    <i class="fa fa-shopping-cart"></i><span class="hidden-xs">Cart is Empty</span>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navigation">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a routerLink="/catalogue">Home</a></li>
+                <li class="dropdown yamm-fw">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h5>Clothing</h5>
+                                        <ul>
+                                            <li><a href="category.html">T-shirts</a></li>
+                                            <li><a href="category.html">Shirts</a></li>
+                                            <li><a href="category.html">Pants</a></li>
+                                            <li><a href="category.html">Accessories</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Shoes</h5>
+                                        <ul>
+                                            <li><a href="category.html">Trainers</a>
+                                            </li>
+                                            <li><a href="category.html">Sandals</a>
+                                            </li>
+                                            <li><a href="category.html">Hiking shoes</a>
+                                            </li>
+                                            <li><a href="category.html">Casual</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Accessories</h5>
+                                        <ul>
+                                            <li><a href="category.html">Trainers</a>
+                                            </li>
+                                            <li><a href="category.html">Sandals</a>
+                                            </li>
+                                            <li><a href="category.html">Hiking shoes</a>
+                                            </li>
+                                            <li><a href="category.html">Casual</a>
+                                            </li>
+                                            <li><a href="category.html">Hiking shoes</a>
+                                            </li>
+                                            <li><a href="category.html">Casual</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Featured</h5>
+                                        <ul>
+                                            <li><a href="category.html">Trainers</a>
+                                            </li>
+                                            <li><a href="category.html">Sandals</a>
+                                            </li>
+                                            <li><a href="category.html">Hiking shoes</a>
+                                            </li>
+                                        </ul>
+                                        <h5>Looks and trends</h5>
+                                        <ul>
+                                            <li><a href="category.html">Trainers</a>
+                                            </li>
+                                            <li><a href="category.html">Sandals</a>
+                                            </li>
+                                            <li><a href="category.html">Hiking shoes</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown yamm-fw">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Ladies <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h5>Clothing</h5>
+                                        <ul>
+                                            <li><a href="category.html">T-shirts</a>
+                                            </li>
+                                            <li><a href="category.html">Shirts</a>
+                                            </li>
+                                            <li><a>Pants</a>
+                                            </li>
+                                            <li><a href="category.html">Accessories</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Shoes</h5>
+                                        <ul>
+                                            <li><a href="category.html">Trainers</a>
+                                            </li>
+                                            <li><a href="category.html">Sandals</a>
+                                            </li>
+                                            <li><a href="category.html">Hiking shoes</a>
+                                            </li>
+                                            <li><a href="category.html">Casual</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Accessories</h5>
+                                        <ul>
+                                            <li><a href="category.html">Trainers</a>
+                                            </li>
+                                            <li><a href="category.html">Sandals</a>
+                                            </li>
+                                            <li><a href="category.html">Hiking shoes</a>
+                                            </li>
+                                            <li><a href="category.html">Casual</a>
+                                            </li>
+                                            <li><a href="category.html">Hiking shoes</a>
+                                            </li>
+                                            <li><a href="category.html">Casual</a>
+                                            </li>
+                                        </ul>
+                                        <h5>Looks and trends</h5>
+                                        <ul>
+                                            <li><a href="category.html">Trainers</a>
+                                            </li>
+                                            <li><a href="category.html">Sandals</a>
+                                            </li>
+                                            <li><a href="category.html">Hiking shoes</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="banner">
+                                            <a href="#">
+                                                <img src="/assets/img/banner.jpg" class="img img-responsive" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="banner">
+                                            <a href="#">
+                                                <img src="/assets/img/banner2.jpg" class="img img-responsive" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <!--<div class="col-md-3">
+        <div class="panel panel-default sidebar-menu navbar-default">
+            <div class="panel-heading" style="background: rgba(20, 10, 178, 0.5); list-style: none">
+                <h3 class="panel-title">Categories</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <a href="category.html">Men <span class="badge badge-danger pull-right">42</span></a>
+                        <ul class="nav-item">
+                            <li class="nav-item"><a href="category.html" class="nav-link">T-shirts</a>
+                            </li>
+                            <li class="nav-item"><a href="category.html" class="nav-link">Shirts</a>
+                            </li>
+                            <li class="nav-item"><a href="category.html" class="nav-link">Pants</a>
+                            </li>
+                            <li class="nav-item"><a href="category.html" class="nav-link">Accessories</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="category.html">Ladies<span class="badge badge-danger pull-right">123</span></a>
+                        <ul class="nav-item">
+                            <li class="nav-item"><a href="category.html" class="nav-link">T-shirts</a>
+                            </li>
+                            <li class="nav-item"><a href="category.html" class="nav-link">Skirts</a>
+                            </li>
+                            <li class="nav-item"><a href="category.html" class="nav-link">Pants</a>
+                            </li>
+                            <li class="nav-item"><a href="category.html" class="nav-link">Accessories</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="category.html">Kids  <span class="badge badge-danger pull-right">11</span></a>
+                        <ul class="nav-item">
+                            <li class="nav-item"><a href="category.html" class="nav-link">T-shirts</a>
+                            </li>
+                            <li class="nav-item"><a href="category.html" class="nav-link">Skirts</a>
+                            </li>
+                            <li class="nav-item"><a href="category.html" class="nav-link">Pants</a>
+                            </li>
+                            <li class="nav-item"><a href="category.html" class="nav-link">Accessories</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+<router-outlet><router-outlet>

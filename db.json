@@ -1,0 +1,113 @@
+{
+    "product": [
+        {
+        "id": 1,
+        "type": "coat",
+        "category": [
+            "Clothing",
+            "Classic",
+            "Coat"
+        ],
+        "name": "Fur Coat",
+        "imageUrl": "/assets/img/product1.jpg",
+        "description": "Premium sheep leather, lined with the highest quality polar bear fur, perfect for winter, long sleeves, knee lenght",
+        "price": 150000,
+        "sizes": ["Regular", "Large", "X-large"],
+        "material": [
+            "Polar Bear Fur",
+            "Italian Sheep Leather"
+        ]},
+        {
+        "id": 2,
+        "type": "blouse",
+        "category": [
+            "Clothing",
+            "Trendy",
+            "Blouse"
+        ],
+        "name": "White Armani Blouse",
+        "imageUrl": "/assets/img/product2.jpg",
+        "description": "White satin top, woven, has a round neck, short sleeves, has knitted lining attached",
+        "price": 30000,
+        "sizes": ["Regular", "Large", "X-large"],
+        "material": [
+            "Polyester",
+            "Cotton"
+        ]},
+        {
+        "id": 3,
+        "type": "lace",
+        "category": [
+            "Clothing",
+            "Costume",
+            "Lace"
+        ],
+        "name": "Black Lace Dress",
+        "imageUrl": "/assets/img/product3.jpg",
+        "description": "Black lace top, hand knitted, leather colar, black leather jacket",
+        "price": 9350,
+        "sizes": ["Regular", "Large", "X-large"],
+        "material": [
+            "Lace",
+            "Kano Leather"
+        ]},
+        {
+        "id": 4,
+        "type": "cap",
+        "category": [
+            "Accesories",
+            "Headgear",
+            "Cap"
+        ],
+        "name": "Black Adidas Cap",
+        "imageUrl": "/assets/img/product4.jpg",
+        "description": "Black trendy looking Adidas Cap, with golden logo and padded interior for comfortable wear",
+        "price": 8900,
+        "sizes": ["Regular", "Large", "X-large"],
+        "material": [
+            "Polyester",
+            "Cotton"
+        ]},
+        {
+        "id": 5,
+        "type": "coverall",
+        "category": [
+            "Clothing",
+            "Outdoor",
+            "Coverall"
+        ],
+        "name": "Northface Everest Coverall",
+        "imageUrl": "/assets/img/product6.jpg",
+        "description": "Blue waterproof, stretchproof, heatproof, coldproof coverall",
+        "price": 17899,
+        "sizes": ["Regular", "Large", "X-large"],
+        "material": [
+            "Polyester",
+            "Kevlar"
+        ]},
+        {
+        "id": 6,
+        "type": "trainer",
+        "category": [
+            "Accesories",
+            "Footwear",
+            "Trainers"
+        ],
+        "name": "Nike Comfy-X Limited Edition Trainers",
+        "imageUrl": "/assets/img/product5.jpg",
+        "description": "Be at the top of your game today with our top of the line nike boots",
+        "price": 7599,
+        "material": [
+            "Faux Leather",
+            "Rubber"
+        ]}
+    ],
+    "user": [
+        {
+        "name": "Samuel Agbonkpolo",
+        "username": "agbonerdy",
+        "email": "agbonkpolosam@gmail.com",
+        "password": "youwouldneverknow"
+        }
+    ]
+}
